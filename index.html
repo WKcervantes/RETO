@@ -3,19 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda de Artesanía</title>
+    <title>Tienda de Artesanía Bella</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
     <header>
-        <div class="logo">Artesanía Sabi</div>
+        <div class="logo">Artesanía Bella</div>
         <div class="cart" onclick="mostrarCarrito()">
             <span id="cart-count">0</span> Artículos en el carrito
         </div>
     </header>
 
     <main>
+        <section class="introduccion">
+            <h1>Bienvenidos a Artesanía Bella</h1>
+            <p>Descubre productos artesanales únicos hechos a mano con amor y dedicación. En nuestra tienda encontrarás una variedad de artículos que reflejan la belleza y la tradición de la artesanía local.</p>
+        </section>
+
+        <section class="mision-vision">
+            <div class="mision">
+                <h2>Nuestra Misión</h2>
+                <p>Brindar productos artesanales de alta calidad que representen las tradiciones culturales, utilizando técnicas ancestrales y materiales sostenibles, mientras promovemos el comercio justo y apoyamos a los artesanos locales.</p>
+            </div>
+            <div class="vision">
+                <h2>Nuestra Visión</h2>
+                <p>Ser una marca líder en la venta de productos artesanales, reconocida por su compromiso con la sostenibilidad, la calidad y el apoyo a las comunidades artesanas. Queremos expandirnos globalmente, llevando lo mejor de nuestra cultura a cada hogar.</p>
+            </div>
+        </section>
+
         <section class="productos">
+            <h2>Productos Destacados</h2>
             <div class="producto">
                 <img src="barro.jpg" alt="Producto 1">
                 <h3>Vaso de barro</h3>
@@ -31,7 +48,7 @@
             <div class="producto">
                 <img src="collar.jpg" alt="Producto 3">
                 <h3>Collar de perlas</h3>
-                <p>Collar artesanal.</p>
+                <p>Collar artesanal hecho con perlas naturales.</p>
                 <button onclick="agregarAlCarrito('Collar de perlas')">Agregar al carrito</button>
             </div>
         </section>
@@ -44,7 +61,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2024 Artesanía Sabi. Todos los derechos reservados.</p>
+        <p>&copy; 2024 Artesanía Bella. Todos los derechos reservados.</p>
     </footer>
 
     <script src="java.js"></script>
