@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Artesanía</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Artesanía Sabi</div>
+        <div class="cart" onclick="mostrarCarrito()">
+            <span id="cart-count">0</span> Artículos en el carrito
+        </div>
+    </header>
+
+    <main>
+        <section class="productos">
+            <div class="producto">
+                <img src="barro.jpg" alt="Producto 1">
+                <h3>Vaso de barro</h3>
+                <p>Vaso hecho a mano con barro local.</p>
+                <button onclick="agregarAlCarrito('Vaso de barro')">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="made.jpg" alt="Producto 2">
+                <h3>Figura de madera</h3>
+                <p>Figura artesanal tallada en madera.</p>
+                <button onclick="agregarAlCarrito('Figura de madera')">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="collar.jpg" alt="Producto 3">
+                <h3>Collar de perlas</h3>
+                <p>Collar artesanal.</p>
+                <button onclick="agregarAlCarrito('Collar de perlas')">Agregar al carrito</button>
+            </div>
+        </section>
+    </main>
+
+    <section id="carrito" class="carrito">
+        <h2>Carrito de Compras</h2>
+        <ul id="carrito-lista"></ul>
+        <button onclick="vaciarCarrito()">Vaciar Carrito</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Artesanía Sabi. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="java.js"></script>
+</body>
+</html>
