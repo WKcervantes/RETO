@@ -1,69 +1,113 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda de Artesanía Bella</title>
-    <link rel="stylesheet" href="estilo.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sabi - E-commerce</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    <header>
-        <div class="logo">Artesanía Bella</div>
-        <div class="cart" onclick="mostrarCarrito()">
-            <span id="cart-count">0</span> Artículos en el carrito
+
+  <!-- Encabezado -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Sabi</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#acerca">Acerca de</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#productos">Productos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contacto">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Introducción -->
+  <section id="introduccion" class="container mt-5">
+    <h1>Bienvenido a Sabi</h1>
+    <p>En Sabi nos especializamos en ofrecer productos únicos y de calidad para mejorar tu día a día. Encuentra lo mejor en tecnología, moda y mucho más.</p>
+  </section>
+
+  <!-- Misión y Visión -->
+  <section id="acerca" class="container mt-5">
+    <h2>¿Quiénes somos?</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <h3>Misión</h3>
+        <p>Brindar una experiencia de compra en línea excepcional, ofreciendo productos de alta calidad con atención al cliente personalizada y compromiso con la satisfacción de nuestros usuarios.</p>
+      </div>
+      <div class="col-md-6">
+        <h3>Visión</h3>
+        <p>Ser líderes en el comercio electrónico, expandiendo nuestro catálogo y ofreciendo un servicio rápido, seguro y de confianza para todos nuestros clientes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Productos -->
+  <section id="productos" class="container mt-5">
+    <h2>Productos Destacados</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="barro.jpg" class="card-img-top" alt="Producto 1">
+          <div class="card-body">
+            <h5 class="card-title">Vaso de barro</h5>
+            <p class="card-text">Vaso de barro artesanal, hecho a mano, con textura rústica y colores naturales, ideal para bebidas tradicionales.</p>
+            <button class="btn btn-primary" onclick="agregarAlCarrito('Vaso de barro')">Agregar al carrito</button>
+          </div>
         </div>
-    </header>
+      </div>
 
-    <main>
-        <section class="introduccion">
-            <h1>Bienvenidos a Artesanía Sabi</h1>
-            <p>Descubre productos artesanales únicos hechos a mano con amor y dedicación. En nuestra tienda encontrarás una variedad de artículos que reflejan la belleza y la tradición de la artesanía local.</p>
-        </section>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="collar.jpg" class="card-img-top" alt="Producto 2">
+          <div class="card-body">
+            <h5 class="card-title">Collar de perlas</h5>
+            <p class="card-text">Collar artesanal de perlas, hecho a mano con detalles únicos, que combina elegancia y originalidad en cada pieza.</p>
+            <button class="btn btn-primary" onclick="agregarAlCarrito('Collar de perlas')">Agregar al carrito</button>
+          </div>
+        </div>
+      </div>
 
-        <section class="mision-vision">
-            <div class="mision">
-                <h2>Nuestra Misión</h2>
-                <p>Brindar productos artesanales de alta calidad que representen las tradiciones culturales, utilizando técnicas ancestrales y materiales sostenibles, mientras promovemos el comercio justo y apoyamos a los artesanos locales.</p>
-            </div>
-            <div class="vision">
-                <h2>Nuestra Visión</h2>
-                <p>Ser una marca líder en la venta de productos artesanales, reconocida por su compromiso con la sostenibilidad, la calidad y el apoyo a las comunidades artesanas. Queremos expandirnos globalmente, llevando lo mejor de nuestra cultura a cada hogar.</p>
-            </div>
-        </section>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="made.jpg" class="card-img-top" alt="Producto 3">
+          <div class="card-body">
+            <h5 class="card-title">Elefante de madera</h5>
+            <p class="card-text">Elefante de madera artesanal, tallado a mano con detalles finos, símbolo de fuerza y sabiduría, único y decorativo.</p>
+            <button class="btn btn-primary" onclick="agregarAlCarrito('Elefante de madera')">Agregar al carrito</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <section class="productos">
-            <h2>Productos Destacados</h2>
-            <div class="producto">
-                <img src="barro.jpg" alt="Producto 1">
-                <h3>Vaso de barro</h3>
-                <p>Vaso hecho a mano con barro local.</p>
-                <button onclick="agregarAlCarrito('Vaso de barro')">Agregar al carrito</button>
-            </div>
-            <div class="producto">
-                <img src="made.jpg" alt="Producto 2">
-                <h3>Figura de madera</h3>
-                <p>Figura artesanal tallada en madera.</p>
-                <button onclick="agregarAlCarrito('Figura de madera')">Agregar al carrito</button>
-            </div>
-            <div class="producto">
-                <img src="collar.jpg" alt="Producto 3">
-                <h3>Collar de perlas</h3>
-                <p>Collar artesanal hecho con perlas naturales.</p>
-                <button onclick="agregarAlCarrito('Collar de perlas')">Agregar al carrito</button>
-            </div>
-        </section>
-    </main>
+  <!-- Contacto -->
+  <section id="contacto" class="container mt-5">
+    <h2>CONTACTO</h2>
+    <h4>Correo: sabi1095@gmail.com</h4>
+    <h4>Celular: 3504896275</h4>
+  </section>
 
-    <section id="carrito" class="carrito">
-        <h2>Carrito de Compras</h2>
-        <ul id="carrito-lista"></ul>
-        <button onclick="vaciarCarrito()">Vaciar Carrito</button>
-    </section>
+  <!-- Pie de página -->
+  <footer class="bg-light text-center p-3 mt-5">
+    <p>&copy; 2024 Sabi. Todos los derechos reservados.</p>
+  </footer>
 
-    <footer>
-        <p>&copy; 2024 Artesanía Sabi. Todos los derechos reservados.</p>
-    </footer>
-
-    <script src="java.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+  <script src="java.js"></script>
 </body>
 </html>
